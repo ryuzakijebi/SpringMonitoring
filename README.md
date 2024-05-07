@@ -99,22 +99,13 @@
     ![](img/3.3.png)
 
 #
-### Scheduled Task
-- Actuator juga bisa digunakan untuk melihat informasi dari Scheduled Task yang terdapat di aplikasi kita
-- Dengan begitu kita bisa tahu kapan sebuah scheduled task berjalan
-- Kita bisa melihat semua scheduled task yang terdapat di aplikasi menggunakan endpoint URL : `/actuator/scheduledtasks`
-
-    ```sh
-    management.endpoints.web.exposure.include=scheduledtasks,threaddump,heapdump,loggers,env,beans,health,info,configprops
-    management.endpoint.scheduledtasks.enabled=true
-    ```
-
-    ![](img/3.4.png)
-
-
-#
-### Metric
+### Metrics
 - Metric adalah informasi ukuran atau takaran dari proses yang terdapat di aplikasi
 - Saat membuat aplikasi, kadang kita perlu mendapatkan informasi metric
 Actuator, secara default sudah menyediakan metric yang bermanfaat yang bisa kita dapatkan menggunakan endpoint URL : `/actuator/metrics`
 
+    ```sh
+    management.endpoints.web.exposure.include=metrics,threaddump,heapdump,loggers,env,beans,health,info,configprops
+    management.endpoint.metrics.enabled=true
+    ```
+    ![](img/3.5.png)
